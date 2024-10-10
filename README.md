@@ -13,12 +13,16 @@ This repository contains a custom template for Cloudflare Custom Pages using Tai
 
 1. Clone this repository to your local machine.
 2. Modify the HTML and CSS files according to your needs.
-3. Use the Tailwind CSS build command to compile the final stylesheet.
-4. Upload the modified files to Cloudflare Pages.
+3. Upload the modified files to Cloudflare Pages.
 
 ## Requirements
 
 - Cloudflare account with access to Cloudflare Pages
+
+## Preview
+- [Block Page](https://kaito-saikyo.github.io/Cloudflare-Costum-Page/templates/block-page.html)
+- [Block Region](https://kaito-saikyo.github.io/Cloudflare-Costum-Page/templates/block-region.html)
+- [Interactive/Under Attack](https://kaito-saikyo.github.io/Cloudflare-Costum-Page/templates/Interactive-page.html)
 
 ## License
 
