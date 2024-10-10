@@ -1,0 +1,104 @@
+<!-- Create By Kaito Saikyo -->
+ 
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta robots="noindex, nofollow"></meta>
+    <title>Waiting for Cloudflare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-dark': '#1a1a2e',
+                        'custom-darker': '#16213e',
+                        'custom-accent': '#0f3460',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-shift 3s ease infinite;
+        }
+        .glow-effect {
+            box-shadow: 0 0 10px rgba(255, 99, 71, 0.7), 0 0 20px rgba(255, 99, 71, 0.5);
+        }
+        .notification {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        @media (max-width: 640px) {
+            .content-wrapper {
+                transform: scale(0.85);
+            }
+        }
+        .main-wrapper .footer, .main-wrapper .main-content h1, .main-wrapper .main-content h2, .main-wrapper .main-content #challenge-body-text {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col h-full bg-gradient-to-br from-custom-dark via-custom-darker to-custom-accent text-gray-200">
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="content-wrapper w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl p-6 sm:p-8 bg-custom-darker bg-opacity-90 shadow-2xl rounded-3xl">
+            <div class="flex items-center justify-center mb-4">
+                <svg class="w-12 h-12 sm:w-16 sm:h-16 text-orange-400" fill="url(#gradient)" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF7E5F; stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FEB47B; stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M13 7H7v6h6V7zM6 3h8a1 1 0 011 1v2h1a3 3 0 110 6h-1v3a1 1 0 01-1 1H6a1 1 0 01-1-1v-3H4a3 3 0 110-6h1V4a1 1 0 011-1z" />
+                </svg>
+            </div>
+
+            <h1 class="mb-3 text-xl sm:text-2xl md:text-3xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 animate-gradient">
+                Waiting for Cloudflare...
+            </h1>
+
+            <p class="mb-8 text-base sm:text-lg md:text-xl text-center">We've detected an anomaly. Verifying that you are human. This may take a few seconds.</p>
+            
+            <div class="bg-gray-800 p-3 sm:p-4 rounded-lg flex items-center justify-between mb-6 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+                ::CAPTCHA_BOX::
+            </div>
+
+            <p class="mt-2 text-xs sm:text-sm text-center text-gray-400">This process only takes a few seconds. Thank you for your patience.</p>
+        </div>
+    </main>
+
+    <footer class="bg-custom-dark bg-opacity-80 text-gray-400 py-2 px-3 text-xs">
+        <div class="container mx-auto flex flex-col items-center space-y-1">
+            <div class="flex flex-col items-center">
+                <span class="text-blue-400">Monitored by Kaito Saikyo</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <p>Your IP: <span class="font-mono text-white cursor-pointer hover:text-blue-300">::CLIENT_IP::</span></p>
+                <p>Ray ID: <span class="font-mono text-white cursor-pointer hover:text-blue-300">::RAY_ID::</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="hidden">
+        ::IM_UNDER_ATTACK_BOX::
+    </div>
+</body>
+
+</html>
